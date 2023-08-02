@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4917221427083140031}
   - component: {fileID: 7070837015389479243}
   - component: {fileID: 2032684149120933096}
-  - component: {fileID: 2064207378219257086}
+  - component: {fileID: 8526997285667477641}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4917221427083140031
 SpriteRenderer:
@@ -116,7 +116,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2064207378219257086
+--- !u!114 &8526997285667477641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,10 +158,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015754401541614957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c13729ab64b6a934c9423e91017c36bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b4c15ac18d05224089979626880df0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
   damage: 5
-  fireSound: {fileID: 8300000, guid: 993c907fa558fe849a38c38052193e68, type: 3}
-  impactarAlEnemigo: {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
+  fireSound: {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
+  hitSound: {fileID: 8300000, guid: d1698dd553af8ef4d887bc83b9687173, type: 3}

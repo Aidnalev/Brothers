@@ -6,9 +6,7 @@ public class Coin : MonoBehaviour
 {
     public int value;  // Asigna un valor a la moneda
 
-    public GameManager gameManager;  // Agrega una referencia al GameManager
-
-    public AudioClip coinSound;  // Agrega una variable para el sonido de la moneda
+       public AudioClip coinSound;  // Agrega una variable para el sonido de la moneda
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33333334, y: 0.33333334}
+  m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
 --- !u!114 &8993265078789926812
 MonoBehaviour:
@@ -166,5 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
-  gameManager: {fileID: 0}
   coinSound: {fileID: 8300000, guid: c50db4410b17d584f996d1f68d85c8a5, type: 3}

@@ -16,8 +16,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     public AudioClip moveSound;
     public AudioClip dashSound;
-    public AudioClip shootSound;
-
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,11 +60,7 @@ public class MovimientoPersonaje : MonoBehaviour
             AudioManager.instance.ReproducirSonido(dashSound);
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            AudioManager.instance.ReproducirSonido(shootSound);
-        }
-    }
+           }
 
     void FixedUpdate()
     {
