@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e3964df0a9a8181478ffd2e4ca172477
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - projectilePrefab: {fileID: 1015754401541614957, guid: 2d3b40463ff6f0446b926fcc4a474e22, type: 3}
+  - firePoint: {instanceID: 0}
+  - bloodEffect: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,9 +11,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
     private static int score;
     public int Score { get { return score; } }
-            public HUDCtroler hudCtroler; // Añade una referencia pública al controlador de HUD
+    public HUDCtroler hudCtroler;
 
- 
+    public static int flechas = 0;
+    public static int polvora = 0;
+    public int Flechas { get { return flechas; } }
+    public int Polvora { get { return polvora; } }
+
      private void Awake()
     {
         if (instance == null)
@@ -30,22 +34,27 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         currentHealth = MaxHealth;
+        hudCtroler.UpdateHealthBar(); // Aseguramos que se actualice la salud al inicio
+        hudCtroler.UpdateAmmo(); // Aseguramos que se actualice la munición al inicio
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, MaxHealth);
-        if(currentHealth <= 0)
+        hudCtroler.UpdateHealthBar();
+
+        if (currentHealth <= 0)
         {
             SceneManager.LoadScene(0);
         }
     }
+
     public void RecuperarVida(float vida)
     {
-        currentHealth += vida; // Aumenta la salud actual por la cantidad especificada
-        currentHealth = Mathf.Clamp(currentHealth, 0, MaxHealth); // Asegura que la salud actual no exceda la salud máxima
-        hudCtroler.UpdateHealthBar(); // Llama a la función para actualizar la barra de salud en la IU
+        currentHealth += vida;
+        currentHealth = Mathf.Clamp(currentHealth, 0, MaxHealth);
+        hudCtroler.UpdateHealthBar();
     }
 
     public int GetScore()
@@ -56,5 +65,20 @@ public class GameManager : MonoBehaviour
     public void AddPoints(int value)
     {
         score += value;
+        hudCtroler.UpdateScore(); // Actualizamos el score en la HUD cada vez que cambie
+    }
+
+    public void AddArrowAmmo(int cantidad)
+    {
+        flechas += cantidad;
+        flechas = Mathf.Clamp(flechas, 0, 100);
+        hudCtroler.UpdateAmmo(); // Actualizamos la munición en la HUD cada vez que cambie
+    }
+
+    public void AddGunpowderAmmo(int cantidad)
+    {
+        polvora += cantidad;
+        polvora = Mathf.Clamp(polvora, 0, 100);
+        hudCtroler.UpdateAmmo(); // Actualizamos la munición en la HUD cada vez que cambie
     }
 }

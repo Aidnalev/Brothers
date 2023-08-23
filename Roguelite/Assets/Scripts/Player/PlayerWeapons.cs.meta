@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 654d258ef1501b942bd32512bc9ef8b1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lanzaPrefab: {instanceID: 0}
+  - garrotePrefab: {instanceID: 0}
+  - dagaPrefab: {instanceID: 0}
+  - espadaPrefab: {fileID: 118792929391301441, guid: b08a3a63d554d5844b8ab251010d6b75, type: 3}
+  - macanaPrefab: {fileID: 2478797811926970129, guid: 28d393b32689fa9448bae6c006332740, type: 3}
+  - arcoPrefab: {instanceID: 0}
+  - dardosPrefab: {instanceID: 0}
+  - mosquetePrefab: {fileID: 69032594642615784, guid: 83642cc51cb5aa9469185087a2c71753, type: 3}
+  - pistolaPrefab: {fileID: 8593080072464803991, guid: 8e7bccbac9e921b43859fef799d5c786, type: 3}
+  - arcabuzPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

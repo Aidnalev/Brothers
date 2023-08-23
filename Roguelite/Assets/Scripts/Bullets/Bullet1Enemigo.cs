@@ -4,8 +4,7 @@ public class Bullet1Enemigo : MonoBehaviour
 {
     public float speed = 20f;
     public float damage = 5f;
-    public AudioClip fireSound; // Sonido al disparar
-    public AudioClip hitSound; // Sonido al golpear al jugador
+    public AudioClip hitSound; // Sonido al golpear al jugador.
 
     private Rigidbody2D rb;
 
@@ -23,10 +22,6 @@ public class Bullet1Enemigo : MonoBehaviour
         }
 
         rb.velocity = direction * speed;
-        if (fireSound != null) // Reproduce el sonido del disparo
-        {
-            AudioManager.instance.ReproducirSonido(fireSound);
-        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -40,11 +35,8 @@ public class Bullet1Enemigo : MonoBehaviour
             }
 
             // Lógica para dañar al jugador
-            HUDCtroler hud = FindObjectOfType<HUDCtroler>();
-            if (hud != null)
-            {
-                hud.TakeDamage(damage);
-            }
+            GameManager.instance.TakeDamage(damage);
+
             Destroy(gameObject);
         }
     }

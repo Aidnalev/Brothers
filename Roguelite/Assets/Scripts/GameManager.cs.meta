@@ -3,7 +3,9 @@ guid: 27741fd485ec56a4d9be89ebf60e1fcc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hudCtroler: {instanceID: 0}
+  - balaEnemigoPrefab: {fileID: 1015754401541614957, guid: d099050cda601b84aaf22da6c8922cfc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
